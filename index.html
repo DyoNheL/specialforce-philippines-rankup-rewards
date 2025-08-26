@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Charset & Viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Basic SEO -->
+  <title>SpecialForce PH - Rankup Rewards</title>
+  <meta name="title" content="Special Force Philippines Rankup Rewards">
+  <meta name="description"
+    content="A complete list of EXP requirements and rank-up rewards for Special Force Philippines, including an EXP calculator to track your progress.">
+  <meta name="author" content="DyoNheL">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sfph.pages.dev/">
+  <meta property="og:title" content="Special Force Philippines Rankup Rewards">
+  <meta property="og:description"
+    content="A complete list of EXP requirements and rank-up rewards for Special Force Philippines, including an EXP calculator to track your progress.">
+  <meta property="og:image" content="https://sfph.pages.dev/img/banner.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sfph.pages.dev/">
+  <meta name="twitter:title" content="Special Force Philippines Rankup Rewards">
+  <meta name="twitter:description"
+    content="A complete list of EXP requirements and rank-up rewards for Special Force Philippines, including an EXP calculator to track your progress.">
+  <meta name="twitter:image" content="https://sfph.pages.dev/img/banner.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+
+  <!-- Javascript -->
+  <script src="js/script.js" defer></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="fx-layer"></div>
+
+  <div class="container">
+    <h1>Special Force Philippines Rankup Rewards</h1>
+
+    <!-- Controls Row -->
+    <div class="controls-row">
+      <input type="text" id="searchInput" placeholder="Search by Level, Rank, EXP, or Reward..." />
+
+      <select id="rankFilter">
+        <option value="">All Ranks</option>
+      </select>
+
+      <select id="rewardFilter">
+        <option value="">All Rewards</option>
+      </select>
+
+      <button id="calcToggle" class="icon-btn" title="Open EXP Calculator">
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <path
+            d="M7 2h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v3h12V5a1 1 0 0 0-1-1H7zm11 7H6v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-7zM8 14h2v2H8v-2zm0 3h2v2H8v-2zm3-3h2v2h-2v-2zm0 3h2v2h-2v-2zm3-3h2v5h-2v-5z"
+            fill="currentColor" />
+        </svg>
+      </button>
+
+      <button id="clearFilters" class="secondary-btn">Clear</button>
+
+      <!-- Calculator Panel -->
+      <div id="calcPanel" class="calc-panel">
+        <h2>EXP Calculator</h2>
+        <label for="currentExp">Enter your current EXP</label>
+        <input id="currentExp" type="text" inputmode="numeric" pattern="[0-9]*" />
+
+        <label for="targetLevel">Target Level (0-74)</label>
+        <input id="targetLevel" type="text" inputmode="numeric" pattern="[0-9]*" />
+
+        <div class="calc-actions">
+          <button id="calcRun">Calculate</button>
+          <button id="calcClose" class="secondary-btn">Close</button>
+        </div>
+        <p id="calcResult" class="calc-result"></p>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="table-note">
+      <p>Disclaimer: This website is not affiliated with Special Force Philippines. The information provided may contain
+        inaccuracies and is for reference purposes only. If you notice any discrepancies, please contact me via Discord.
+      </p>
+      <a href="https://discord.com/users/960845059153092629" target="_blank" class="discord-btn">
+        Contact me on Discord
+      </a>
+    </div>
+
+    <div class="table-container">
+      <table id="rankTable">
+        <thead>
+          <tr>
+            <th>LVL</th>
+            <th>Rank</th>
+            <th>EXP</th>
+            <th>Rewards</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>&copy;
+        <script>document.write(new Date().getFullYear());</script> DyoNheL | Designed for SF Gamers
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>
